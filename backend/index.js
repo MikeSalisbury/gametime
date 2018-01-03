@@ -3,6 +3,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 const keys = require('./config/keys');
+
 const app = express();
 
 passport.use(new GoogleStrategy({
@@ -14,6 +15,12 @@ passport.use(new GoogleStrategy({
  })
 );
 
+app.get(
+  '/auth/google',
+  passport.authenticate('google', {
+    scope: ['profile', 'email']
+  })
+);
 
 // passport.use(new FacebookStrategy({
 //   clientID: keys.facebookClientID,
@@ -22,6 +29,11 @@ passport.use(new GoogleStrategy({
 //  }, (accessToken) => {
 //   console.log(accessToken);
 //  })
+// );
+
+// app.get('/auth/facebook', passport.authenticate('facebook', {
+//     scope: ['profile', 'email']
+//   })
 // );
 
 const PORT =  process.env.PORT || 5000;
