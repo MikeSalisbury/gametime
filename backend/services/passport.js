@@ -15,12 +15,14 @@ passport.use(new GoogleStrategy({
  })
 );
 
-
-// passport.use(new FacebookStrategy({
-//   clientID: keys.facebookClientID,
-//   clientSecret: keys.facebookClientSecret,
-//   callbackURL: '/auth/facebook/callback'
-//  }, (accessToken) => {
-//   console.log(accessToken);
-//  })
-// );
+passport.use(new FacebookStrategy({
+  clientID: keys.facebookAppId,
+  clientSecret: keys.facebookAppSecret,
+  callbackURL: '/auth/facebook/callback'
+ },
+ (accessToken, refreshToken, profile, done) => {
+  console.log(accessToken);
+  console.log(refreshToken);
+  console.log(profile);
+ })
+);
