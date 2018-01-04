@@ -22,6 +22,11 @@ app.get(
   })
 );
 
+app.get(
+  '/auth/google/callback',
+  passport.authenticate('google')
+);
+
 // passport.use(new FacebookStrategy({
 //   clientID: keys.facebookClientID,
 //   clientSecret: keys.facebookClientSecret,
@@ -35,6 +40,11 @@ app.get(
 //     scope: ['profile', 'email']
 //   })
 // );
+
+app.get(
+  '/auth/google/callback',
+  passport.authenticate('facebook')
+);
 
 const PORT =  process.env.PORT || 5000;
 app.listen(PORT);
