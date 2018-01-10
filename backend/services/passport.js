@@ -9,20 +9,29 @@ passport.use(new GoogleStrategy({
   callbackURL: '/auth/google/callback'
  },
  (accessToken, refreshToken, profile, done) => {
-  console.log(accessToken);
-  console.log(refreshToken);
-  console.log(profile);
+  // console.log(accessToken);
+  // console.log(refreshToken);
+  // email
+  console.log(profile.emails[0].value);
+  // first name
+  console.log(profile.name.givenName);
+  // last name
+  console.log(profile.name.familyName);
  })
 );
 
 passport.use(new FacebookStrategy({
   clientID: keys.facebookAppId,
   clientSecret: keys.facebookAppSecret,
-  callbackURL: '/auth/facebook/callback'
+  callbackURL: 'http://localhost:5000/auth/facebook/callback',
+  "profileFields": ["email", 'displayName', 'name']
  },
  (accessToken, refreshToken, profile, done) => {
-  console.log(accessToken);
-  console.log(refreshToken);
-  console.log(profile);
+   // email
+   console.log(profile.emails[0].value);
+   // first name
+   console.log(profile.name.givenName);
+   // last name
+   console.log(profile.name.familyName);
  })
 );
