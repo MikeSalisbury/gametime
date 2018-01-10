@@ -11,6 +11,8 @@ passport.use(new GoogleStrategy({
  (accessToken, refreshToken, profile, done) => {
   // console.log(accessToken);
   // console.log(refreshToken);
+  // google id
+  console.log(profile.id);
   // email
   console.log(profile.emails[0].value);
   // first name
@@ -27,6 +29,8 @@ passport.use(new FacebookStrategy({
   "profileFields": ["email", 'displayName', 'name']
  },
  (accessToken, refreshToken, profile, done) => {
+   // facebook id
+   console.log(profile.id);
    // email
    console.log(profile.emails[0].value);
    // first name
