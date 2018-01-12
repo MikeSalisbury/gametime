@@ -12,14 +12,19 @@ passport.use(new GoogleStrategy({
   callbackURL: '/auth/google/callback'
  },
  (accessToken, refreshToken, profile, done) => {
-
-  new User({
-    authId: profile.id,
-    email: profile.emails[0].value,
-    firstName: profile.name.givenName,
-    lastName: profile.name.familyName
-  }).save();
-
+  User.findOne({ authId: profile.id }).then(existingUser => {
+    if (existingUser) {
+      return done(null, existingUser);
+    } else {
+      const user = new User({
+        authId: profile.id,
+        email: profile.emails[0].value,
+        firstName: profile.name.givenName,
+        lastName: profile.name.familyName
+      }).save();
+      done(null, user);
+    }
+  });
  })
 );
 
@@ -30,13 +35,18 @@ passport.use(new FacebookStrategy({
   "profileFields": ["email", 'displayName', 'name']
  },
  (accessToken, refreshToken, profile, done) => {
-
-   new User({
-     authId: profile.id,
-     email: profile.emails[0].value,
-     firstName: profile.name.givenName,
-     lastName: profile.name.familyName
-   }).save();
-
- })
-);
+   User.findOne({ authId: profile.id }).then(existingUser => {
+     if (existingUser) {
+       return done(null, existingUser);
+     } else {
+       const user = new User({
+         authId: profile.id,
+         email: profile.emails[0].value,
+         firstName: profile.name.givenName,
+         lastName: profile.name.familyName
+       }).save();
+       done(null, user);
+     }
+   });
+  })
+ );
