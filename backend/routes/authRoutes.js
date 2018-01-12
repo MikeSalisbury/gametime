@@ -28,4 +28,9 @@ module.exports = app => {
     passport.authenticate('facebook')
   );
 
+  app.get(
+    '/api/current_user', (req, res) => {
+      res.send(req.user);
+    });
+
 };
