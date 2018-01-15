@@ -1,0 +1,29 @@
+{
+  "name": "flex_project",
+  "version": "1.0.0",
+  "description": "[Live](https://gametimeapp.herokuapp.com/)",
+  "main": "./backend/index.js",
+  "dependencies": {
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9",
+    "nodemon": "^1.14.11",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth20": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeSalisbury/gametime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeSalisbury/gametime/issues"
+  },
+  "homepage": "https://github.com/MikeSalisbury/gametime#readme"
+}
