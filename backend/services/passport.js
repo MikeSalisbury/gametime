@@ -43,7 +43,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
   clientID: keys.facebookAppId,
   clientSecret: keys.facebookAppSecret,
-  callbackURL: 'http://localhost:5000/auth/facebook/callback',
+  callbackURL: keys.facebookURICallback,
   "profileFields": ["email", 'displayName', 'name']
  },
  (accessToken, refreshToken, profile, done) => {
