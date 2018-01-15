@@ -18,8 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node ./backend/index.js",
+    "dev": "nodemon ./backend/index.js"
   },
   "repository": {
     "type": "git",
