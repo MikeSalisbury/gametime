@@ -11,9 +11,14 @@ module.exports = app => {
     })
   );
 
+  // app.get(
+  //   '/auth/google/callback',
+  //   passport.authenticate('google')
+  // );
   app.get(
     '/auth/google/callback',
-    passport.authenticate('google')
+    passport.authenticate('google', { failureRedirect: '/auth/google' }),
+    (req, res) => res.redirect('/')
   );
 
   app.get(
@@ -23,9 +28,15 @@ module.exports = app => {
     })
   );
 
+  // app.get(
+  //   '/auth/facebook/callback',
+  //   passport.authenticate('facebook')
+  // );
+
   app.get(
     '/auth/facebook/callback',
-    passport.authenticate('facebook')
+    passport.authenticate('facebook', { failureRedirect: '/auth/facebook' }),
+    (req, res) => res.redirect('/')
   );
 
   app.get(
