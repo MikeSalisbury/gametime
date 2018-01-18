@@ -18,3 +18,22 @@ To create a production build, use [36mnpm run build[39m.
 
 ^[[A^[[A^[[A^[[A^[[B^[[B^[[B 
 
+^C[0;31m~/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client[1;37m (master)[0;31m$[0m npm start
+
+> client@0.1.0 start /Users/MikeSalisbury/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client
+> react-scripts start
+
+[2J[3J[H[36mStarting the development server...
+[39m
+[2J[3J[H[32mCompiled successfully![39m
+
+You can now view [1mclient[22m in the browser.
+
+  [1mLocal:[22m            http://localhost:[1m3000[22m/
+  [1mOn Your Network:[22m  http://192.168.43.62:[1m3000[22m/
+
+Note that the development build is not optimized.
+To create a production build, use [36mnpm run build[39m.
+
+^C
+[0;31m~/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client[1;37m (master)[0;31m$[0m 
