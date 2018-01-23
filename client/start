@@ -36,4 +36,72 @@ Note that the development build is not optimized.
 To create a production build, use [36mnpm run build[39m.
 
 ^C
-[0;31m~/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client[1;37m (master)[0;31m$[0m cd [K[K[K
+[0;31m~/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client[1;37m (master)[0;31m$[0m cd [K[K[Knode
+[1G[0J> [3Gconsole.log((0.3)[1D[1G[0J> console.log((0.3 )[20G[1G[0J> console.log((0.3 +)[21G[1G[0J> console.log((0.3 + )[22G[1G[0J> console.log((0.3 + 0)[23G[1G[0J> console.log((0.3 + 0.)[24G[1G[0J> console.log((0.3 + 0.2)[25G[1C === 0.5)
+true
+[90mundefined[39m
+[1G[0J> [3Gconsole.log((0.1 + 0.2) ===0.3)
+false
+[90mundefined[39m
+[1G[0J> [3G[1G[0J> console.log((0.1 + 0.2) ===0.3)[34G[1D[1D[1D[1D[1G[0J> console.log((0.1 + 0.2) === 0.3)[31G[4C
+false
+[90mundefined[39m
+[1G[0J> [3Gconsole.log((0.2 + 03[1G[0J> console.log((0.2 + 0[23G.3) === 0.5)
+true
+[90mundefined[39m
+[1G[0J> [3G[1G[0J> console.log((0.2 + 0.3) === 0.5)[35G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1C[1C[1C[1C[1C[1G[0J> console.log((0.2 + 0.13) === 0.5)[25G[1C[1C[1C[1D[1D[1G[0J> console.log((0.2 + 0.1) === 0.5)[25G[1C[1C[1C[1C[2C[1C[1C[1C[1G[0J> console.log((0.2 + 0.1) === 0.)[33G[1G[0J> console.log((0.2 + 0.1) === 0.3)[34G[1C
+false
+[90mundefined[39m
+[1G[0J> [3G[1G[0J> console.log((0.2 + 0.1) === 0.3)[35G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0J> console.log((0.12 + 0.1) === 0.3)[19G[1C[1G[0J> console.log((0.1 + 0.1) === 0.3)[19G[1C[1C[1C[1C[1C[1C[6C[1C[1C[1C[1G[0J> console.log((0.1 + 0.1) === 0.)[33G[1G[0J> console.log((0.1 + 0.1) === 0.2)[34G[1C
+true
+[90mundefined[39m
+[1G[0J> [3G[1G[0J> console.log((0.1 + 0.1) === 0.2)[35G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0J> console.log((0.21 + 0.1) === 0.2)[19G[1C[1G[0J> console.log((0.2 + 0.1) === 0.2)[19G[1C[1C[1C[1C[1C[1C[1G[0J> console.log((0.2 + 0.) === 0.2)[24G[1G[0J> console.log((0.2 + 0.2) === 0.2)[25G[1C[1C[1C[1C[1C[1C[1C[1C[1C[1G[0J> console.log((0.2 + 0.2) === 0.)[33G[1G[0J> console.log((0.2 + 0.2) === 0.4)[34G[1C
+true
+[90mundefined[39m
+[1G[0J> [3G[1G[0J> console.log((0.2 + 0.2) === 0.4)[35G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0J> [3G
+(To exit, press ^C again or type .exit)
+[1G[0J> [3Gq
+ReferenceError: q is not defined
+    at repl:1:1
+    at sigintHandlersWrap (vm.js:22:35)
+    at sigintHandlersWrap (vm.js:73:12)
+    at ContextifyScript.Script.runInThisContext (vm.js:21:12)
+    at REPLServer.defaultEval (repl.js:340:29)
+    at bound (domain.js:280:14)
+    at REPLServer.runBound [as eval] (domain.js:293:12)
+    at REPLServer.<anonymous> (repl.js:538:10)
+    at emitOne (events.js:101:20)
+    at REPLServer.emit (events.js:188:7)
+[1G[0J> [3Gkq[1G[0J> k[4G[1G[0J> [3Gq
+ReferenceError: q is not defined
+    at repl:1:1
+    at sigintHandlersWrap (vm.js:22:35)
+    at sigintHandlersWrap (vm.js:73:12)
+    at ContextifyScript.Script.runInThisContext (vm.js:21:12)
+    at REPLServer.defaultEval (repl.js:340:29)
+    at bound (domain.js:280:14)
+    at REPLServer.runBound [as eval] (domain.js:293:12)
+    at REPLServer.<anonymous> (repl.js:538:10)
+    at emitOne (events.js:101:20)
+    at REPLServer.emit (events.js:188:7)
+[1G[0J> [3Gquit
+ReferenceError: quit is not defined
+    at repl:1:1
+    at sigintHandlersWrap (vm.js:22:35)
+    at sigintHandlersWrap (vm.js:73:12)
+    at ContextifyScript.Script.runInThisContext (vm.js:21:12)
+    at REPLServer.defaultEval (repl.js:340:29)
+    at bound (domain.js:280:14)
+    at REPLServer.runBound [as eval] (domain.js:293:12)
+    at REPLServer.<anonymous> (repl.js:538:10)
+    at emitOne (events.js:101:20)
+    at REPLServer.emit (events.js:188:7)
+[1G[0J> [3G
+(To exit, press ^C again or type .exit)
+[1G[0J> [3G
+^C
+[0;31m~/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client[1;37m (master)[0;31m$[0m node -j[K[K[K-v
+bash: node-v: command not found
+[0;31m~/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client[1;37m (master)[0;31m$[0m node -v
+v6.10.1
+[0;31m~/Desktop/AppAcademyOffical/jobsearch_curriculum/flex_project/client[1;37m (master)[0;31m$[0m 
