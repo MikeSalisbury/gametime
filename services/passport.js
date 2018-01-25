@@ -22,7 +22,7 @@ passport.use(new GoogleStrategy({
   callbackURL: keys.googleURICallback
  },
  async (accessToken, refreshToken, profile, done) => {
-   const existingUser = await User.findOne({ authId: profile.id })
+   const existingUser = await User.findOne({ authId: profile.id });
 
      if (existingUser) {
        return done(null, existingUser);
@@ -33,10 +33,10 @@ passport.use(new GoogleStrategy({
        email: profile.emails[0].value,
        firstName: profile.name.givenName,
        lastName: profile.name.familyName
-      }).save()
-      done(null, user);
+      }).save();
+       done(null, user);
      }
-   };
+   }
   )
  );
 
@@ -59,9 +59,9 @@ passport.use(new FacebookStrategy({
      email: profile.emails[0].value,
      firstName: profile.name.givenName,
      lastName: profile.name.familyName
-    }).save()
-    done(null, user));
+    }).save();
+     done(null, user);
    }
- };
+  }
  )
 );
