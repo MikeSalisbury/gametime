@@ -16,17 +16,19 @@ passport.deserializeUser((id, done) => {
   });
 });
 
-passport.use(new GoogleStrategy({
+passport.use(new GoogleStrategy(
+  {
   clientID: keys.googleClientID,
   clientSecret: keys.googleClientSecret,
-  callbackURL: keys.googleURICallback
+  callbackURL: keys.googleURICallback,
+  proxy: true
  },
  async (accessToken, refreshToken, profile, done) => {
    const existingUser = await User.findOne({ authId: profile.id });
 
      if (existingUser) {
        return done(null, existingUser);
-     } else {
+     }
 
       const user = await new User({
        authId: profile.id,
@@ -35,33 +37,32 @@ passport.use(new GoogleStrategy({
        lastName: profile.name.familyName
       }).save();
        done(null, user);
-     }
-   }
+  }
   )
  );
 
-passport.use(new FacebookStrategy({
+passport.use(new FacebookStrategy(
+  {
   clientID: keys.facebookAppId,
   clientSecret: keys.facebookAppSecret,
   callbackURL: keys.facebookURICallback,
   proxy: true,
   "profileFields": ["email", 'displayName', 'name']
  },
- async (accessToken, refreshToken, profile, done) => {
-   const existingUSer = await User.findOne({ authId: profile.id })
-
-   if (existingUser) {
-     return done(null, existingUser);
-   } else {
-
-    const user = await new User({
-     authId: profile.id,
-     email: profile.emails[0].value,
-     firstName: profile.name.givenName,
-     lastName: profile.name.familyName
-    }).save();
-     done(null, user);
-   }
-  }
- )
+ (accessToken, refreshToken, profile, done) => {
+   User.findOne({ authId: profile.id }).then(
+     existingUser => {
+       if (existingUser) {
+         return done(null, existingUser);
+       } else {
+         new User({
+           authId: profile.id,
+           email: profile.emails[0].value,
+           firstName: profile.name.givenName,
+           lastName: profile.name.familyName
+         }).save()
+         .then(user => done(null, user));
+       }
+     })
+  })
 );
