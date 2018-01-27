@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './footer.css';
 
-class Footer extends Component {
-  render() {
-    return(
-      <div>
-        Footer
-      </div>
-    );
-  }
-}
-
-export default Footer;
+export default () => (
+  <div className='footer'>
+    <div className="linkedin-github">
+       <a href="https://www.linkedin.com/in/mike-salisbury-4116b74b/" target="_blank" rel="noopener noreferrer"><div className="linkedin"></div></a>
+       <a href="https://github.com/MikeSalisbury" target="_blank" rel="noopener noreferrer"><div className="github"></div></a>
+   </div>
+  </div>
+);
