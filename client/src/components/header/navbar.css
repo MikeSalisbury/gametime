@@ -1,21 +1,45 @@
 .nav-wrapper {
   display: flex;
-  width: 100%;
+  /*width: 100%;*/
   background-color: white;
   justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 .nav-logo {
   font-size: 30px;
+  color: #BA55D3;
+  padding: 10px;
+  border-right: 1px solid black;
 }
 
 .nav-logo:hover {
   cursor: pointer;
-  background-color: gray;
+  background-color: lightgrey;
+}
+
+.nav-right-wrapper {
+  /*width: 15%*/
 }
 
 .nav-right {
   font-size: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-right-item {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.nav-right-item:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.nav-right-item:last-child {
+  border-right: 0px;
+  border-left: 0px;
 }
