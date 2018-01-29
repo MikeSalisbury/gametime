@@ -1,7 +1,7 @@
 .nav-wrapper {
   display: flex;
   width: 100%;
-  background-color: blue;
+  background-color: white;
   justify-content: space-between;
   padding: 10px;
   box-sizing: border-box;
@@ -9,6 +9,11 @@
 
 .nav-logo {
   font-size: 30px;
+}
+
+.nav-logo:hover {
+  cursor: pointer;
+  background-color: gray;
 }
 
 .nav-right {
