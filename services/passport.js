@@ -30,11 +30,18 @@ passport.use(new GoogleStrategy(
        return done(null, existingUser);
      }
 
+     function capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+     }
+     let first = capitalize(profile.name.givenName);
+     let last = capitalize(profile.name.familyName);
+
       const user = await new User({
+
        authId: profile.id,
        email: profile.emails[0].value,
-       firstName: profile.name.givenName,
-       lastName: profile.name.familyName
+       firstName: first,
+       lastName: last
       }).save();
        done(null, user);
   }
