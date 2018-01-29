@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from './header/Header';
 import Footer from './footer/Footer';
-import * as actions from '../actions/index';
+import * as actions from '../actions/actions';
 
 const Landing = () => <h2>Landing</h2>;
 const GamesNew = () => <h2>Game New Form</h2>;
