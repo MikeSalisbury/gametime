@@ -17,14 +17,15 @@ class Header extends Component {
       case false:
         return (
           <div className="nav-right">
-            <Link to='/games/browse' className="nav-right-item"><li className="nav-right-item">Games</li></Link>
-            <Link to='/auth/google' className="nav-right-item"><li className="nav-right-item">Login with Google</li></Link>
+            <Link to='/games/browse' className="nav-right-item"><li>Browse Games</li></Link>
+            <Link to='/auth/google' className="nav-right-item"><li>Login with Google</li></Link>
           </div>
         );
       default:
         return(
           <div className="nav-right">
-            <Link to='/games/browse' className="nav-right-item"><li>Games</li></Link>
+            <Link to='/games/browse' className="nav-right-item"><li>Browse Games</li></Link>
+            <Link to='/games/new' className="nav-right-item"><li>Create Game</li></Link>
             <Link to='/user' className="nav-right-item"><li>{this.props.auth.firstName}</li></Link>
           </div>
         );
