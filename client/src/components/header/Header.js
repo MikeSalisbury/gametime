@@ -24,8 +24,8 @@ class Header extends Component {
       default:
         return(
           <div className="nav-right">
-            <Link to='/games/browse' className="nav-right-item"><li>Browse Games</li></Link>
-            <Link to='/games/new' className="nav-right-item"><li>Create Game</li></Link>
+            <Link to='/games/browse' className="nav-right-item"><li>Browse</li></Link>
+            <Link to='/games/new' className="nav-right-item"><li>Create</li></Link>
             <Link to='/user' className="nav-right-item"><li>{this.props.auth.firstName}</li></Link>
             <button className="nav-right-item"><li>Logout</li></button>
           </div>
