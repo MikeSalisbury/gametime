@@ -14,7 +14,9 @@ module.exports = app => {
   app.get(
     '/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/auth/google' }),
-    (req, res) => res.redirect('/')
+    (req, res) => {
+      res.redirect('/games/browse');
+    }
   );
 
   app.get(

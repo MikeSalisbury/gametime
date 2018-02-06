@@ -18,7 +18,7 @@ class Header extends Component {
         return (
           <div className="nav-right">
             <Link to='/games/browse' className="nav-right-item"><li>Browse Games</li></Link>
-            <Link to='/auth/google' className="nav-right-item"><li>Login with Google</li></Link>
+            <a href='/auth/google' className="nav-right-item"><li>Login with Google</li></a>
           </div>
         );
       default:
@@ -27,7 +27,7 @@ class Header extends Component {
             <Link to='/games/browse' className="nav-right-item"><li>Browse</li></Link>
             <Link to='/games/new' className="nav-right-item"><li>Create</li></Link>
             <Link to='/user' className="nav-right-item"><li>{this.props.auth.firstName}</li></Link>
-            <button className="nav-right-item"><li>Logout</li></button>
+            <a className="nav-right-item" href='/api/logout'><li>Logout</li></a>
           </div>
         );
     }
