@@ -11,11 +11,13 @@ module.exports = app => {
     })
   );
 
+
+  // Need to fix redirect issue - needs to know that it's going to Prod ENV or 3000 server
   app.get(
     '/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/auth/google' }),
     (req, res) => {
-      res.redirect('/games/browse');
+      res.redirect('http://localhost:3000/games/browse');
     }
   );
 
