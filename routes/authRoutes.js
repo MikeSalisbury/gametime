@@ -3,7 +3,9 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 const app = require('../index.js');
 
+
 module.exports = app => {
+
   app.get(
     '/auth/google',
     passport.authenticate('google', {
@@ -11,13 +13,11 @@ module.exports = app => {
     })
   );
 
-
-
   app.get(
     '/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/auth/google' }),
     (req, res) => {
-      res.redirect('/');
+      res.redirect(process.env.PORT? '/' : 'http://localhost:3000/');
     }
   );
 
