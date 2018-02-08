@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import Landing from './landing/landingContainer';
+import BrowseGames from './games/browseGames/browseGamesContainer';
+import GameForm from './games/gameForm/gameFormContainer';
+
 import * as actions from '../actions/actions';
 
-const GamesNew = () => <h2>Game New Form</h2>;
+
 const GamesShow = () => <h2>Game Show</h2>;
-const GamesBrowse = () => <h2>Browse Games!</h2>;
 const UserProfile = () => <h2>Users Profile </h2>;
 
 class App extends Component {
@@ -26,8 +28,8 @@ class App extends Component {
             <Footer />
             <Switch>
             <Route exact path='/' component={Landing} />
-            <Route exact path ='/games/new' component={GamesNew} />
-            <Route exact path ='/games/browse' component={GamesBrowse} />
+            <Route exact path ='/games/new' component={GameForm} />
+            <Route exact path ='/games/browse' component={BrowseGames} />
             <Route exact path ='/games/:gameId' component={GamesShow} />
             <Route exact path = '/user' component={UserProfile} />
             </Switch>
