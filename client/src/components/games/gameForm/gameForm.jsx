@@ -12,7 +12,7 @@ class GameForm extends Component {
 
   render() {
     return(
-      <div className='landing-wrapper'>
+      <div className='gameForm-wrapper'>
         <h1>Game Form Component!</h1>
       </div>
     );

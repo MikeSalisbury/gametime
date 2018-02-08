@@ -12,7 +12,7 @@ class BrowseGames extends Component {
 
   render() {
     return(
-      <div className='landing-wrapper'>
+      <div className='browseGames-wrapper'>
         <h1>Browse Games Component</h1>
       </div>
     );
