@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import BrowseGames from './browseGames';
+import ShowGame from './showGame';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => ({
@@ -10,4 +10,4 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BrowseGames));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ShowGame));

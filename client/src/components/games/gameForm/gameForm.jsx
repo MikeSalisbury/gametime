@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class gameForm extends Component {
+class GameForm extends Component {
 
   constructor(props) {
     super(props);
@@ -19,4 +19,4 @@ class gameForm extends Component {
   }
 }
 
-export default gameForm;
+export default GameForm;

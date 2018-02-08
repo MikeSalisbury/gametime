@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class BrowseGames extends Component {
+class ShowGame extends Component {
 
   constructor(props) {
     super(props);
@@ -12,11 +12,11 @@ class BrowseGames extends Component {
 
   render() {
     return(
-      <div className='landing-wrapper'>
-        <h1>Browse Games Component</h1>
+      <div className='showGame-wrapper'>
+        <h1>Game Show Component!</h1>
       </div>
     );
   }
 }
 
-export default BrowseGames;
+export default ShowGame;
