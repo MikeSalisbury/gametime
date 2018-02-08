@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from './header/Header';
 import Footer from './footer/Footer';
+import Landing from './landing/landingContainer';
 import * as actions from '../actions/actions';
 
-const Landing = () => <h2>Landing</h2>;
 const GamesNew = () => <h2>Game New Form</h2>;
 const GamesShow = () => <h2>Game Show</h2>;
 const GamesBrowse = () => <h2>Browse Games!</h2>;
