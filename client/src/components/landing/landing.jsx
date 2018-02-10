@@ -7,10 +7,11 @@ class Landing extends Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   render() {
+    console.log(this.props);
     return(
       <div className='landing-wrapper'>
         <h1>LANDING</h1>
