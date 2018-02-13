@@ -11,7 +11,7 @@ module.exports = app => {
   app.get('/api/games/:id', (req, res) => {
     Game.find({id: req.id});
   });
-  // req.body will allow us to manipulate the payload receives (via body-parser)
+  // req.body will allow us to manipulate the payload received (via body-parser)
 
   app.post('/api/games', (req, res) => {
     console.log(req.body);
