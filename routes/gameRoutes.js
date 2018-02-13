@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const app = require('../index.js');
-const Game = mongoose.model('Game');
+const Game = mongoose.model('games');
 
 module.exports = app => {
 

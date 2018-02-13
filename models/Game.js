@@ -10,7 +10,7 @@ const gameSchema = new Schema({
   location: String,
   time: Date,
   lat: String,
-  Lng: String,
+  lng: String,
 
 },
 {timestamps: true}
