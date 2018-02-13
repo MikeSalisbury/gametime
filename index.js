@@ -13,6 +13,7 @@ mongoose.connect(keys.mongoURI);
 const app = express();
 
 // This will parse the body for any POST or PATCH Requests received
+// Use req.body to handle payload within route.
 app.use(
   bodyParser.json()
 );
