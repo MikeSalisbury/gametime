@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
@@ -11,6 +12,10 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+// This will parse the body for any POST or PATCH Requests received
+app.use(
+  bodyParser.json()
+);
 // 30 day expiry
 app.use(
   cookieSession({
@@ -19,6 +24,7 @@ app.use(
     keys: [keys.cookieKey1, keys.cookieKey2]
   })
 );
+
 
 app.use(passport.initialize());
 app.use(passport.session());
