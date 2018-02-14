@@ -16,10 +16,6 @@ span, article, footer, time, small {
   background: transparent;
 }
 
-.favicon {
-  border-radius: 50%;
-}
-
 html { height: 100%; overflow:auto; }
 body { height: 100%; }
 
