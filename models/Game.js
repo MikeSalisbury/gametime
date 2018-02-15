@@ -8,7 +8,8 @@ const gameSchema = new Schema({
   numPlayers: Number,
   players: Array,
   location: String,
-  time: Date,
+  startDatetime: Date,
+  endDatetime: Date,
   lat: String,
   lng: String,
 

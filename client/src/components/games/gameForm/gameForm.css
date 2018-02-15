@@ -10,12 +10,48 @@ justify-content: center;
   width: 80%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gameForm-label {
-
+  margin: 10px;
 }
 
 .gameForm-gameTitle {
 border: 1px solid black;
+}
+
+.gameForm-gameSport {
+  border: 1px solid black;
+
+}
+
+.gameForm-gameNumPlayers {
+  border: 1px solid black;
+
+}
+
+.gameForm-gameLocation {
+  border: 1px solid black;
+
+}
+
+.start-end-dates {
+
+}
+
+.gameForm-gameStart {
+  border: 1px solid black;
+
+}
+
+.gameForm-gameEnd {
+  border: 1px solid black;
+
+}
+
+.gameForm-gameSubmit {
+  border: 1px solid black;
+
 }
