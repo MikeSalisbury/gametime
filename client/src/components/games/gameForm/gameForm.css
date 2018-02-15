@@ -1,0 +1,21 @@
+.gameForm-wrapper {
+display: flex;
+justify-content: center;
+
+}
+
+.gameForm-form {
+  border: 1px solid black;
+  margin-top: 15px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.gameForm-label {
+
+}
+
+.gameForm-gameTitle {
+border: 1px solid black;
+}
