@@ -34,7 +34,7 @@ class GameForm extends Component {
         <form className='gameForm-form' onSubmit={this.handleSubmit}>
           <label><div className='gameForm-label'>TITLE</div>
           <input
-            className='gameForm-gameTitle'
+            className='gameForm-gameInput'
             type='text'
             placeholder='Give your game a short distinct name'
             onChange={this.update('title')}
@@ -44,7 +44,7 @@ class GameForm extends Component {
           <label><div className='gameForm-label'>SPORT</div>
             <select onChange={this.update('sport')}
               className='gameForm-gameSport' value={sport}>
-              <option value="">Select a sport name</option>
+              <option value="">Select a sport</option>
               <option value='Baseball'>Baseball</option>
               <option value='Basketball'>Basketball</option>
               <option value='Cricket'>Cricket</option>
@@ -69,7 +69,7 @@ class GameForm extends Component {
 
           <label><div className='gameForm-label'>LOCATION</div>
             <input
-              className='gameForm-gameLocation'
+              className='gameForm-gameInput'
               type='text'
               placeholder='Venue address'
               onChange={this.update('location')}
@@ -97,7 +97,7 @@ class GameForm extends Component {
           <input
             className='gameForm-gameSubmit'
             type='submit'
-            value='Create Game' />
+            value='CREATE GAME' />
         </form>
       </div>
     );
