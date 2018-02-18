@@ -61,9 +61,8 @@ class GameForm extends Component {
             className='gameForm-gameSkill' value={skill}>
             <option value="">Select a Skill Level</option>
             <option value='Beginner'>Beginner</option>
-            <option value='Intermediate'>Intermediate</option>
-            <option value='Amateur'>Amateur</option>
-            <option value="Pro">Professional</option>
+            <option value='Intermediate'>Intermediate (highschool level / no college)</option>
+            <option value="Advanced">Advanced (college level)</option>
           </select><br/>
           </label>
 
