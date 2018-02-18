@@ -50,6 +50,10 @@ justify-content: center;
   background-color: white;
 }
 
+.gameForm-gameNumPlayers:focus {
+  border: 1px solid #BA55D3;
+}
+
 .gameForm-gameSport {
   font-size: 20px;
   height: 45px;
