@@ -38,6 +38,15 @@ justify-content: center;
   border: 1px solid #E8E8E8;
 }
 
+.gameForm-gameSkill {
+  font-size: 20px;
+  height: 45px;
+  margin-bottom: 15px;
+  border: 1px solid #E8E8E8;
+  width: 25%;
+  background-color: white;
+}
+
 .gameForm-gameNumPlayers {
   border: 1px solid #E8E8E8;
   padding: 15px;

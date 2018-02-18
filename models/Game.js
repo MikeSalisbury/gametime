@@ -6,6 +6,7 @@ const gameSchema = new Schema({
   title: String,
   sport: String,
   numPlayers: Number,
+  skill: String,
   players: Array,
   location: String,
   startDatetime: Date,

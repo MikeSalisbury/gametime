@@ -5,7 +5,7 @@ class GameForm extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { title: "", sport: "", location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
+    this.state = { title: "", sport: "", skill: "", location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -27,7 +27,7 @@ class GameForm extends Component {
 
   render() {
     console.log(this.props);
-    const { title, sport, numPlayers, location, startDatetime, endDatetime } = this.state;
+    const { title, sport, skill, numPlayers, location, startDatetime, endDatetime } = this.state;
 
     return(
       <div className='gameForm-wrapper'>
@@ -44,7 +44,7 @@ class GameForm extends Component {
           <label><div className='gameForm-label'>SPORT</div>
             <select onChange={this.update('sport')}
               className='gameForm-gameSport' value={sport}>
-              <option value="">Select a sport</option>
+              <option value="">Select a Sport</option>
               <option value='Baseball'>Baseball</option>
               <option value='Basketball'>Basketball</option>
               <option value='Cricket'>Cricket</option>
@@ -54,6 +54,17 @@ class GameForm extends Component {
               <option value='Softball'>Softball</option>
               <option value='Tennis'>Tennis</option>
             </select><br/>
+          </label>
+
+          <label><div className='gameForm-label'>SKILL LEVEL</div>
+          <select onChange={this.update('skill')}
+            className='gameForm-gameSkill' value={skill}>
+            <option value="">Select a Skill Level</option>
+            <option value='Beginner'>Beginner</option>
+            <option value='Intermediate'>Intermediate</option>
+            <option value='Amateur'>Amateur</option>
+            <option value="Pro">Professional</option>
+          </select><br/>
           </label>
 
           <label><div className='gameForm-label'>NUMBER OF PLAYERS</div>
