@@ -20,6 +20,7 @@ module.exports = app => {
       gameManager,
       title,
       sport,
+      skill,
       numPlayers,
       players,
       location,
@@ -29,15 +30,16 @@ module.exports = app => {
     } = req.body;
 
     const game = new Game({
-      gameManager: Number,
-      title: String,
-      sport: String,
-      numPlayers: Number,
-      players: Array,
-      location: String,
-      time: Date,
-      lat: String,
-      lng: String,
+      gameManager,
+      title,
+      sport,
+      skill,
+      numPlayers,
+      players,
+      location,
+      time,
+      lat,
+      lng,
     });
 
     game.save();

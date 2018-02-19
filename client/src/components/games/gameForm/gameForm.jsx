@@ -5,11 +5,18 @@ class GameForm extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { title: "", sport: "", skill: "", location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
+    if (this.props.auth !== null) {
+      console.log(this.props.auth);
+    }
+    this.state = { gameManager: "", title: "", sport: "", skill: "", location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
+
+  }
+
+  componentWillReceiveProps() {
 
   }
 
@@ -26,7 +33,7 @@ class GameForm extends Component {
 
 
   render() {
-    console.log(this.props);
+    console.log(this.state);
     const { title, sport, skill, numPlayers, location, startDatetime, endDatetime } = this.state;
 
     return(

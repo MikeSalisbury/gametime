@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { createGame } from '../../../actions/actions';
 
 const mapStateToProps = state => ({
-auth: state.auth
+  auth: state.auth
 });
 
 const mapDispatchToProps = dispatch => ({
