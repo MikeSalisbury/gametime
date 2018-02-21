@@ -47,6 +47,11 @@ justify-content: center;
   background-color: white;
 }
 
+.gameForm-gameSkill:hover {
+  border: 1px solid #E8E8E8;
+  cursor: pointer;
+}
+
 .gameForm-gameNumPlayers {
   border: 1px solid #E8E8E8;
   padding: 15px;
@@ -57,6 +62,11 @@ justify-content: center;
   margin-bottom: 15px;
   box-sizing: border-box;
   background-color: white;
+}
+
+.gameForm-gameNumPlayers:hover {
+  border: 1px solid #E8E8E8;
+  cursor: pointer;
 }
 
 .gameForm-gameNumPlayers:focus {
@@ -70,6 +80,11 @@ justify-content: center;
   border: 1px solid #E8E8E8;
   width: 25%;
   background-color: white;
+}
+
+.gameForm-gameSport:hover {
+  border: 1px solid #E8E8E8;
+  cursor: pointer;
 }
 
 .start-end-dates {
@@ -87,7 +102,10 @@ justify-content: center;
   box-sizing: border-box;
   border-radius: 5px;
   background-color: white;
+}
 
+.gameForm-gameStart:hover {
+  cursor: pointer;
 }
 
 .gameForm-gameEnd {
@@ -98,7 +116,10 @@ justify-content: center;
   box-sizing: border-box;
   border-radius: 5px;
   background-color: white;
+}
 
+.gameForm-gameEnd:hover {
+  cursor: pointer;
 }
 
 .gameForm-gameStart:focus {

@@ -28,7 +28,7 @@ module.exports = app => {
       lng
     } = req.body;
 
-    console.log(req.body);
+    console.log(req.body.gameManager);
 
     const game = new Game({
       gameManager,

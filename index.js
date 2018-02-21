@@ -15,9 +15,6 @@ const app = express();
 // This will parse the body for any POST or PATCH Requests received
 // Use req.body to handle payload within route.
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
 // 30 day expiry
 app.use(
   cookieSession({
@@ -27,7 +24,8 @@ app.use(
   })
 );
 
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
