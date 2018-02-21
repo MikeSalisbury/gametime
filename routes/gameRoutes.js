@@ -14,7 +14,6 @@ module.exports = app => {
   // req.body will allow us to manipulate the payload received (via body-parser)
 
   app.post('/api/games', (req, res) => {
-    console.log(req.body);
 
     const {
       gameManager,
@@ -28,6 +27,8 @@ module.exports = app => {
       lat,
       lng
     } = req.body;
+
+    console.log(req.body);
 
     const game = new Game({
       gameManager,

@@ -1,4 +1,4 @@
-const express = require('express');
+  const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
@@ -14,9 +14,10 @@ const app = express();
 
 // This will parse the body for any POST or PATCH Requests received
 // Use req.body to handle payload within route.
-app.use(
-  bodyParser.json()
-);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // 30 day expiry
 app.use(
   cookieSession({
