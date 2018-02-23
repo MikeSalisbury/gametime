@@ -10,7 +10,7 @@ class BrowseGames extends Component {
 
   }
 
-  render() {    
+  render() {
     return(
       <div className='browseGames-wrapper'>
         <h1>Browse Games Component</h1>

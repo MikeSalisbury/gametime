@@ -23,12 +23,19 @@ module.exports = app => {
       numPlayers,
       players,
       location,
-      time,
-      lat,
-      lng
-    } = req.body;
+      startDatetime,
+      endDatetime
+    } = req.body.game;
 
-    console.log(req.body.gameManager);
+    console.log(gameManager);
+    console.log(title);
+    console.log(sport);
+    console.log(skill);
+    console.log(numPlayers);
+    console.log(players);
+    console.log(location);
+    console.log(startDatetime);
+    console.log(endDatetime);
 
     const game = new Game({
       gameManager,
@@ -38,9 +45,8 @@ module.exports = app => {
       numPlayers,
       players,
       location,
-      time,
-      lat,
-      lng,
+      startDatetime,
+      endDatetime
     });
 
     game.save();

@@ -28,7 +28,8 @@ class GameForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createGame(this.state).then(id => this.props.history.push(`/games/${id}`));
+    this.props.createGame(this.state)
+    .then(id => this.props.history.push(`/games/${id}`));
   }
 
   update(prop) {
@@ -39,7 +40,6 @@ class GameForm extends Component {
 
 
   render() {
-    console.log(this.state);
     const { title, sport, skill, numPlayers, location, startDatetime, endDatetime } = this.state;
 
     return(
