@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const app = require('../index.js');
 const Game = mongoose.model('games');
+const User = mongoose.model('users');
 
 module.exports = app => {
 
@@ -25,7 +26,10 @@ module.exports = app => {
       location,
       startDatetime,
       endDatetime
-    } = req.body.game;
+    } = req.body;
+
+    let user = User.findOne({id: gameManager});
+    console.log(user);
 
     console.log(gameManager);
     console.log(title);

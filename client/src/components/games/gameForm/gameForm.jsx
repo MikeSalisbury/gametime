@@ -10,7 +10,7 @@ class GameForm extends Component {
       managerId = this.props.auth._id;
     }
 
-    this.state = { gameManager: managerId, title: "", sport: "", skill: "", location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
+    this.state = { gameManager: managerId, title: "", sport: "", skill: "", players: [], location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 

@@ -12,8 +12,8 @@ export const fetchUser = () => async dispatch => {
 // }
 
 export const createGame = (game) => dispatch => (
-  axios.post('/api/games', { game })
+  axios.post('/api/games', game )
     .then( newGame => {
-      dispatch(createGame(newGame));
+      dispatch({type: CREATE_GAME, payload: newGame.data});
     return newGame.id;
   }));
