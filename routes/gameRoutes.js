@@ -29,7 +29,7 @@ module.exports = app => {
     } = req.body;
 
     let user = User.findOne({id: gameManager});
-    console.log(user);
+    console.log(user.schema.Schema.obj);
 
     console.log(gameManager);
     console.log(title);
