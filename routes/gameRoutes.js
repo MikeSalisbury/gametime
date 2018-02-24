@@ -28,18 +28,7 @@ module.exports = app => {
       endDatetime
     } = req.body;
 
-    let user = User.findOne({id: gameManager});
-    console.log(user.schema.Schema.obj);
-
-    console.log(gameManager);
-    console.log(title);
-    console.log(sport);
-    console.log(skill);
-    console.log(numPlayers);
-    console.log(players);
-    console.log(location);
-    console.log(startDatetime);
-    console.log(endDatetime);
+    players.push(req.user);
 
     const game = new Game({
       gameManager,
