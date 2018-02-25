@@ -7,7 +7,9 @@ class ShowGame extends Component {
   }
 
   componentDidMount() {
-
+    console.log(this.props);
+    let id = this.props.match.params.gameId;
+    this.props.fetchGame(id);
   }
 
   render() {
