@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ObjectId = require('mongoose').Types.ObjectId;
 const app = require('../index.js');
 const Game = mongoose.model('games');
 const User = mongoose.model('users');
@@ -10,8 +11,8 @@ module.exports = app => {
   });
 
   app.get('/api/games/:id', (req, res) => {
-    Game.findById(req.params.id).then(game => res.send(game));
-    // res.send(game);
+    Game.find( { "_id": ObjectId(req.params.id) } )
+    .then(game => res.send(game));
   });
   // req.body will allow us to manipulate the payload received (via body-parser)
 
@@ -31,7 +32,7 @@ module.exports = app => {
 
     players.push(req.user);
 
-    const game = new Game({
+    let game = new Game({
       gameManager,
       title,
       sport,
@@ -44,6 +45,9 @@ module.exports = app => {
     });
 
     game.save();
+    console.log(game);
+    console.log("SEPARATOR");
+    console.log(JSON.stringify(game));
     res.send(game);
   });
 
