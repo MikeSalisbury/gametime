@@ -7,15 +7,14 @@ class ShowGame extends Component {
   }
 
   componentDidMount() {
+
+    this.props.fetchGame(this.props.match.params.gameId);
     console.log(this.props);
-    let id = this.props.match.params.gameId;
-    this.props.fetchGame(id);
   }
 
   render() {
     return(
       <div className='showGame-wrapper'>
-        <h1>Game Show Component!</h1>
       </div>
     );
   }

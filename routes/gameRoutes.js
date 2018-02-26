@@ -10,8 +10,8 @@ module.exports = app => {
   });
 
   app.get('/api/games/:id', (req, res) => {
-    let game = Game.find({id: req.body.id});
-    res.send(game);
+    Game.findById(req.params.id).then(game => res.send(game));
+    // res.send(game);
   });
   // req.body will allow us to manipulate the payload received (via body-parser)
 

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-
+// lat: String,
+// lng: String,
 const gameSchema = new Schema({
   gameManager: Number,
   title: String,
@@ -11,8 +12,6 @@ const gameSchema = new Schema({
   location: String,
   startDatetime: Date,
   endDatetime: Date,
-  lat: String,
-  lng: String,
 
 },
 {timestamps: true}

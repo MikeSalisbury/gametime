@@ -6,10 +6,10 @@ export const fetchUser = () => async dispatch => {
     dispatch({ type: FETCH_USER, payload: res.data });
   };
 
-export const fetchGame = (id) => async dispatch => {
-  const res = await axios.get(`/api/games/${id}`)
-  dispatch({ type: RECEIVE_GAME, payload: res.data})
-}
+export const fetchGame = (id) => dispatch => (
+  axios.get(`/api/games/${id}`)
+  .then(game => dispatch({ type: RECEIVE_GAME, payload: game.data }))
+);
 
 // export const createGame = (game) => async dispatch => {
 //   const res = await axios.post('/api/games', { game })
