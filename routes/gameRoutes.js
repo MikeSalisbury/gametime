@@ -44,12 +44,12 @@ module.exports = app => {
       endDatetime
     });
 
-    game.save();
-    console.log(game);
-    console.log("SEPARATOR");
-    console.log(JSON.stringify(game));
-    res.send(game);
+    game.save( (err, newGame) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(newGame);
+      }
+    });
   });
-
-
 };

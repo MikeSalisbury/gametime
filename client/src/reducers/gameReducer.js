@@ -4,8 +4,12 @@ export default (state = {}, action) =>  {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_GAME:
-    console.log(action.payload[0]);
+    if (typeof action.payload === Array) {
       return action.payload[0];
+    } else {
+      return action.payload;
+    }
+
     default:
       return state;
   }
