@@ -5,25 +5,17 @@ class GameForm extends Component {
 
   constructor(props) {
     super(props);
-    let managerId = "";
-    if (props.auth !== null) {
-      managerId = this.props.auth._id;
-    }
 
-    this.state = { gameManager: managerId, title: "", sport: "", skill: "", players: [], location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
+    this.state = {title: "", sport: "", skill: "", players: [], location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
-    if (this.state.gameManager === "") {
-      this.props.fetchUser();
-    }
+    
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.state.gameManager === "") {
-      this.setState({gameManager: nextProps.auth._id});
-    }
+
   }
 
   handleSubmit(e) {

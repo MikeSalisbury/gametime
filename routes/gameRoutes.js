@@ -19,7 +19,6 @@ module.exports = app => {
   app.post('/api/games', (req, res) => {
 
     const {
-      gameManager,
       title,
       sport,
       skill,
@@ -33,7 +32,7 @@ module.exports = app => {
     players.push(req.user);
 
     let game = new Game({
-      gameManager,
+      "gameManager" : req.user,
       title,
       sport,
       skill,

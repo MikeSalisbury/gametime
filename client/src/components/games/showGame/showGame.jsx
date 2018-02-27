@@ -11,11 +11,23 @@ class ShowGame extends Component {
   }
 
   render() {
-    return(
-      <div className='showGame-wrapper'>
-        <h1>Game Show Page</h1>
-      </div>
-    );
+    if (this.props.game) {
+      return(
+        <div className='showGame-wrapper'>
+          <div className='showGame-title'>{this.props.game.title}</div>
+          <div className='showGame-sport'>{this.props.game.sport}</div>
+          <div className='showGame-skill'>{this.props.game.skill}</div>
+          <div className='showGame-location'>{this.props.game.location}</div>
+          <div className='showGame-startDatetime'>{this.props.game.startDatetime}</div>
+          <div className='showGame-endDatetime'>{this.props.game.endDatetime}</div>
+
+        </div>
+      );
+    } else {
+      return (
+        <h1>loading</h1>
+      );
+    }
   }
 }
 
