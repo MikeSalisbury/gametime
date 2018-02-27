@@ -4,7 +4,8 @@ export default (state = {}, action) =>  {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_GAME:
-      return action.payload;
+    console.log(action.payload[0]);
+      return action.payload[0];
     default:
       return state;
   }
