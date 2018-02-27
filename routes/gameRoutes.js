@@ -11,7 +11,7 @@ module.exports = app => {
   });
 
   app.get('/api/games/:id', (req, res) => {
-    Game.find( { "_id": ObjectId(req.params.id) } )
+    Game.findOne( { "_id": ObjectId(req.params.id) } )
     .then(game => res.send(game));
   });
   // req.body will allow us to manipulate the payload received (via body-parser)
@@ -47,7 +47,9 @@ module.exports = app => {
     game.save( (err, newGame) => {
       if (err) {
         console.log(err);
+        res.send(400, err.message);
       } else {
+        console.log(newGame);
         res.send(newGame);
       }
     });
