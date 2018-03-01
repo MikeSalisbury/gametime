@@ -11,12 +11,22 @@ class BrowseGames extends Component {
   }
 
   render() {
-    console.log(this.props.games);
-    return(
-      <div className='browseGames-wrapper'>
-        <h1>Browse Games Component</h1>
-      </div>
-    );
+
+    if(this.props.games){
+      return(
+        <div className='browseGames-wrapper'>
+          {Object.values(this.props.games).map(game => {
+            game.title;
+            game.sport;
+            game.skill;
+            game.numPlayers;
+            game.location;
+          })}
+        </div>
+      );
+    } else {
+      return("loading");
+    }
   }
 }
 

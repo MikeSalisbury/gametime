@@ -8,7 +8,11 @@ export default (state = {}, action) =>  {
       const game = { [action.payload._id]: action.payload };
       return game;
     case RECEIVE_GAMES:
-      return action.payload;
+      let games = {};
+      action.payload.forEach(indexGame => {
+        games[indexGame._id] = indexGame;
+      });
+      return games;
     default:
       return null;
   }
