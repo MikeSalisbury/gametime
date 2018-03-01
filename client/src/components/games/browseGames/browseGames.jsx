@@ -7,10 +7,11 @@ class BrowseGames extends Component {
   }
 
   componentDidMount() {
-
+    this.props.fetchGames();
   }
 
   render() {
+    console.log(this.props.games);
     return(
       <div className='browseGames-wrapper'>
         <h1>Browse Games Component</h1>

@@ -11,7 +11,7 @@ class GameForm extends Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,7 +32,8 @@ class GameForm extends Component {
 
 
   render() {
-    const { title, sport, skill, numPlayers, location, startDatetime, endDatetime } = this.state;
+    const { title, sport, skill, numPlayers,
+       location, startDatetime, endDatetime } = this.state;
 
     return(
       <div className='gameForm-wrapper'>

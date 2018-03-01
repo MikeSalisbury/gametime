@@ -7,9 +7,8 @@ const User = mongoose.model('users');
 module.exports = app => {
 
   // index page
-  app.get('/api/games/index', (req, res) => {
-    Game.find()
-    .then(games => res.send(games));
+  app.get('/api/games', (req, res) => {
+    Game.find().then(games => res.send(games));
   });
 
   // show page

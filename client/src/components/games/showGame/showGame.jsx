@@ -12,20 +12,23 @@ class ShowGame extends Component {
   }
 
   render() {
-    console.log(this.props.game.players);
+    console.log(this.props.game);
     if (this.props.game) {
+      const { title, sport, numPlayers, skill, location,
+         startDatetime, endDatetime } =
+          this.props.game[this.props.match.params.gameId];
       return(
         <div className='showGame-wrapper'>
           <div className='showGame-header'>
             <div className='showGame-heroImage'>GAME IMAGE</div>
             <div className='showGame-info'>
-              <div className='showGame-title'>{this.props.game.title}</div>
-              <div className='showGame-sport'>{this.props.game.sport}</div>
-              <div className='showGame-numPlayers'>{this.props.game.numPlayers}</div>
-              <div className='showGame-skill'>{this.props.game.skill}</div>
-              <div className='showGame-location'>{this.props.game.location}</div>
-              <div className='showGame-startDatetime'>{this.props.game.startDatetime}</div>
-              <div className='showGame-endDatetime'>{this.props.game.endDatetime}</div>
+              <div className='showGame-title'>{title}</div>
+              <div className='showGame-sport'>{sport}</div>
+              <div className='showGame-numPlayers'>{numPlayers}</div>
+              <div className='showGame-skill'>{skill}</div>
+              <div className='showGame-location'>{location}</div>
+              <div className='showGame-startDatetime'>{startDatetime}</div>
+              <div className='showGame-endDatetime'>{endDatetime}</div>
             </div>
           </div>
           <div className='showGame-bottom'>
