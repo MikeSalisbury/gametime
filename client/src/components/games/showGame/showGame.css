@@ -1,5 +1,29 @@
 .showGame-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.showGame-header {
+  display: flex;
+}
+
+.showGame-info {
+  border: 1px solid black;
+  width: 30%;
+  height: 500px;
+}
+
+.showGame-heroImage {
+  border: 1px solid black;
+  width: 70%;
+  height: 500px;
+}
+
+.showGame-locationMap {
+  border: 1px solid black;
+  width: 40%;
+  height: 300px;
 }
 
 .showGame-title {
@@ -23,5 +47,5 @@
 }
 
 .showGame-endDatetime {
-  
+
 }
