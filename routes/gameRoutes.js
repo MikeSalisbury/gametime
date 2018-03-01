@@ -6,10 +6,13 @@ const User = mongoose.model('users');
 
 module.exports = app => {
 
+  // index page
   app.get('/api/games/index', (req, res) => {
-    Game.find({});
+    Game.find()
+    .then(games => res.send(games));
   });
 
+  // show page
   app.get('/api/games/:id', (req, res) => {
     Game.findOne( { "_id": ObjectId(req.params.id) } )
     .then(game => res.send(game));

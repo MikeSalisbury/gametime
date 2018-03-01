@@ -17,7 +17,7 @@ class ShowGame extends Component {
       return(
         <div className='showGame-wrapper'>
           <div className='showGame-header'>
-            <div className='showGame-heroImage' />
+            <div className='showGame-heroImage'>GAME IMAGE</div>
             <div className='showGame-info'>
               <div className='showGame-title'>{this.props.game.title}</div>
               <div className='showGame-sport'>{this.props.game.sport}</div>
