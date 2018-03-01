@@ -2,28 +2,50 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 25px;
+  margin-bottom: 62px;
 }
 
 .showGame-header {
   display: flex;
 }
 
+.showGame-bottom {
+  display: flex;
+}
+
 .showGame-info {
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
   width: 30%;
-  height: 500px;
+  height: 400px;
 }
 
 .showGame-heroImage {
   border: 1px solid black;
+  border-bottom: 0;
   width: 70%;
-  height: 500px;
+  height: 400px;
+}
+
+.showGame-players {
+  border: 1px solid black;
+  border-right: 0;
+  width: 20%;
+  height: 450px;
+}
+
+.showGame-chat {
+  border: 1px solid black;
+  width: 50%;
+  height: 450px;
 }
 
 .showGame-locationMap {
   border: 1px solid black;
-  width: 40%;
-  height: 300px;
+  border-left: 0;
+  width: 30%;
+  height: 450px;
 }
 
 .showGame-title {

@@ -28,8 +28,11 @@ class ShowGame extends Component {
               <div className='showGame-endDatetime'>{this.props.game.endDatetime}</div>
             </div>
           </div>
-          
-          <div className='showGame-locationMap' />
+          <div className='showGame-bottom'>
+            <div className='showGame-players'>List of Player Names</div>
+            <div className='showGame-chat'>CHAT</div>
+            <div className='showGame-locationMap' >MAP</div>
+          </div>
         </div>
       );
     } else {
