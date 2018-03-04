@@ -1,12 +1,58 @@
 .browseGames-wrapper {
-  display: 1px solid black;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
+}
+
+.browseGames-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 10px;
+}
+
+.browseGames-map {
+  border: 1px solid black;
+  height: 400px;
+  margin: 10px;
+}
+
+.browseGames-filter {
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  /*border: 1px solid black;*/
+  margin: 10px;
+  padding: 10px;
+}
+
+.filterButton {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  color: #BA55D3;
+  background-color: white;
+}
+
+.filterButton:hover {
+  color: white;
+  background-color: #BA55D3;
+}
+
+.browseGames-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 10px;
 }
 
 .browseGameItem-info {
   border: 1px solid black;
-  background-color: purple;
   margin: 10px;
   padding: 10px;
-  height: 400px;
 }
