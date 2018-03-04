@@ -19,7 +19,13 @@ class BrowseGames extends Component {
         <div className='browseGames-wrapper'>
           {games.map(game => <BrowseGamesItem
             key={`game-${game._id}`}
-            props={game} />
+            title={game.title}
+            sport={game.sport}
+            skill={game.skill}
+            numPlayers={game.numPlayers}
+            location={game.location}
+            startDatetime={game.startDatetime}
+            endDatetime={game.endDatetime} />
           )}
         </div>
       );

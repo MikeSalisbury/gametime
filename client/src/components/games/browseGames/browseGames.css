@@ -1,3 +1,12 @@
+.browseGames-wrapper {
+  display: 1px solid black;
+  width: 100%;
+}
+
 .browseGameItem-info {
   border: 1px solid black;
+  background-color: purple;
+  margin: 10px;
+  padding: 10px;
+  height: 400px;
 }
