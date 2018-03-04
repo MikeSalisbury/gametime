@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowseGamesItem } from './browseGamesItem';
 
 class BrowseGames extends Component {
 
@@ -11,17 +12,15 @@ class BrowseGames extends Component {
   }
 
   render() {
-
     if(this.props.games){
+      const games = Object.values(this.props.games);
+      console.log(games);
       return(
         <div className='browseGames-wrapper'>
-          {Object.values(this.props.games).map(game => {
-            game.title;
-            game.sport;
-            game.skill;
-            game.numPlayers;
-            game.location;
-          })}
+          {games.map(game => <BrowseGamesItem
+            key={`game-${game._id}`}
+            props={game} />
+          )}
         </div>
       );
     } else {
