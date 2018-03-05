@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './landing.css';
 
 class Landing extends Component {
 
@@ -13,7 +14,7 @@ class Landing extends Component {
   render() {
     return(
       <div className='landing-wrapper'>
-        <h1>LANDING</h1>
+        <img className='landing-heroImage' src='https://jsmultisport.com/wp-content/uploads/2017/07/sports.jpg'/>
       </div>
     );
   }
