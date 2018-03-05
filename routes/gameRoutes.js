@@ -11,6 +11,11 @@ module.exports = app => {
     Game.find().then(games => res.send(games));
   });
 
+  app.post('/api/filteredSport', (req, res) => {
+    Game.find({sport: req.body.sport})
+    .then(games => res.send(games));
+  });
+
   // show page
   app.get('/api/games/:id', (req, res) => {
     Game.findOne( { "_id": ObjectId(req.params.id) } )

@@ -11,6 +11,11 @@ export const fetchGames = () => dispatch => {
   .then(games => dispatch({ type: RECEIVE_GAMES, payload: games.data}))
 };
 
+export const fetchFilteredGames = (sport) => dispatch => {
+  axios.post('api/filteredSport', sport)
+  .then(games => dispatch({ type: RECEIVE_GAMES, payload: games.data}))
+};
+
 export const fetchGame = (id) => dispatch => (
   axios.get(`/api/games/${id}`)
   .then(game => dispatch({ type: RECEIVE_GAME, payload: game.data }))

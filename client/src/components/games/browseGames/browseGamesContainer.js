@@ -9,7 +9,8 @@ games: state.games
 });
 
 const mapDispatchToProps = dispatch => ({
-fetchGames: () => dispatch(fetchGames())
+fetchGames: () => dispatch(fetchGames()),
+fetchFilteredGames: (sport) => dispatch(fetchGames(sport))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BrowseGames));

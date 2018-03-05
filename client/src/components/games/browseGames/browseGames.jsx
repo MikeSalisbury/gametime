@@ -6,10 +6,17 @@ class BrowseGames extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {sport: ''};
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchGames();
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.fetchFilteredGames(e.target.value);
   }
 
   render() {
@@ -21,11 +28,16 @@ class BrowseGames extends Component {
           <div className='browseGames-left'>
             <div className='browseGames-map'>Map</div>
             <div className='browseGames-filter'>
-              <button className='filterButton'>Basketball</button>
-              <button className='filterButton'>Football</button>
-              <button className='filterButton'>Cricket</button>
-              <button className='filterButton'>Soccer</button>
-              <button className='filterButton'>Baseball</button>
+              <button className='filterButton' value='Basketball'
+                 onClick={this.handleSubmit}>Basketball</button>
+              <button className='filterButton' value='Football'
+                 onClick={this.handleSubmit}>Football</button>
+              <button className='filterButton' value='Cricket'
+                 onClick={this.handleSubmit}>Cricket</button>
+              <button className='filterButton' value='Soccer'
+                 onClick={this.handleSubmit}>Soccer</button>
+              <button className='filterButton' value='Baseball'
+                 onClick={this.handleSubmit}>Baseball</button>
             </div>
           </div>
           <div className='browseGames-right'>
