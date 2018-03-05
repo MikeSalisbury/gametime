@@ -12,6 +12,7 @@ module.exports = app => {
   });
 
   app.post('/api/filteredSport', (req, res) => {
+    console.log(req.body.sport);
     Game.find({sport: req.body.sport})
     .then(games => res.send(games));
   });

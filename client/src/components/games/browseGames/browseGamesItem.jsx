@@ -2,7 +2,6 @@ import React from 'react';
 
 export function BrowseGamesItem({title, sport, skill, numPlayers,
 players, location, startDatetime, endDatetime}) {
-  console.log(title);
   return(
     <div className='browseGameItem-info'>
       <h1>{title}</h1>

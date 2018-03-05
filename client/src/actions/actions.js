@@ -12,7 +12,7 @@ export const fetchGames = () => dispatch => {
 };
 
 export const fetchFilteredGames = (sport) => dispatch => {
-  axios.post('api/filteredSport', sport)
+  axios.post('/api/filteredSport', { sport })
   .then(games => dispatch({ type: RECEIVE_GAMES, payload: games.data}))
 };
 
