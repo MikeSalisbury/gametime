@@ -27,6 +27,7 @@ module.exports = app => {
   app.post('/api/games', (req, res) => {
 
     const {
+      gameImage,
       title,
       sport,
       skill,
@@ -34,13 +35,18 @@ module.exports = app => {
       players,
       location,
       startDatetime,
-      endDatetime
+      endDatetime,
+      lat,
+      lng
     } = req.body;
 
     players.push(req.user);
 
     let game = new Game({
       "gameManager" : req.user,
+      gameImage,
+      lat,
+      lng,
       title,
       sport,
       skill,

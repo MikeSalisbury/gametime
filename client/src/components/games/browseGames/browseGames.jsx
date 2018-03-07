@@ -43,6 +43,7 @@ class BrowseGames extends Component {
           <div className='browseGames-right'>
             {games.map(game => <BrowseGamesItem
               key={`game-${game._id}`}
+              gameImage={game.gameImage}
               title={game.title}
               sport={game.sport}
               skill={game.skill}
