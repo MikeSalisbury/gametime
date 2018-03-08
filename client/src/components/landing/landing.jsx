@@ -21,6 +21,18 @@ class Landing extends Component {
         <div className='landing-wrapper'>
           <img className='landing-heroImage' src='https://jsmultisport.com/wp-content/uploads/2017/07/sports.jpg'/>
           <h1 className='landing-browseTagline'><Link to='/games/browse'>FIND LOCAL PICKUP GAMES BY SPORT</Link></h1>
+            <div className='landingGames-filter'>
+              <button className='filterButton' value='Basketball'
+                 onClick={this.handleSubmit}>Basketball</button>
+              <button className='filterButton' value='Football'
+                 onClick={this.handleSubmit}>Football</button>
+              <button className='filterButton' value='Cricket'
+                 onClick={this.handleSubmit}>Cricket</button>
+              <button className='filterButton' value='Soccer'
+                 onClick={this.handleSubmit}>Soccer</button>
+              <button className='filterButton' value='Baseball'
+                 onClick={this.handleSubmit}>Baseball</button>
+            </div>
           <div className='landing-gameIndex'>
             {games.map(game => <BrowseGamesItem
               key={`game-${game._id}`}
