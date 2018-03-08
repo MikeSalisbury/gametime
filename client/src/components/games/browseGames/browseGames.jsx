@@ -11,11 +11,17 @@ class BrowseGames extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchGames();
+    let sport = this.props.match.params.sport;
+    if (sport) {
+      this.props.fetchFilteredGames(sport);
+    } else {
+      this.props.fetchGames();
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.history.push(`/games/browse/${e.target.value}`);
     this.props.fetchFilteredGames(e.target.value);
   }
 

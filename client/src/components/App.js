@@ -30,6 +30,7 @@ class App extends Component {
             <Route exact path='/' component={Landing} />
             <Route exact path ='/games/new' component={GameForm} />
             <Route exact path ='/games/browse' component={BrowseGames} />
+            <Route exact path ='/games/browse/:sport' component={BrowseGames} />
             <Route exact path ='/games/:gameId' component={ShowGame} />
             <Route exact path = '/user' component={UserProfile} />
             </Switch>

@@ -7,23 +7,31 @@ class Landing extends Component {
 
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchGames();
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.history.push(`/games/browse/${e.target.value}`);
+  }
+
   render() {
     if (this.props.games) {
       let games = Object.values(this.props.games);
-
+      const { fetchFilteredGames } = this.props.fetchFilteredGames;
       return(
         <div className='landing-wrapper'>
           <img className='landing-heroImage' src='https://jsmultisport.com/wp-content/uploads/2017/07/sports.jpg'/>
           <h1 className='landing-browseTagline'><Link to='/games/browse'>FIND LOCAL PICKUP GAMES BY SPORT</Link></h1>
             <div className='landingGames-filter'>
-              <button className='filterButton' value='Basketball'
-                 onClick={this.handleSubmit}>Basketball</button>
+              <button
+                onClick={this.handleSubmit}
+                className='filterButton' value='Basketball'>
+                Basketball</button>
               <button className='filterButton' value='Football'
                  onClick={this.handleSubmit}>Football</button>
               <button className='filterButton' value='Cricket'
