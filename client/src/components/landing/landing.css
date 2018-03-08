@@ -7,5 +7,11 @@
 }
 
 .landing-browseTagline {
+  margin: 20px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #BA55D3;
   
 }

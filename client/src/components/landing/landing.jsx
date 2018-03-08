@@ -20,7 +20,7 @@ class Landing extends Component {
       return(
         <div className='landing-wrapper'>
           <img className='landing-heroImage' src='https://jsmultisport.com/wp-content/uploads/2017/07/sports.jpg'/>
-          <h1 className='landing-browseTagline'><Link to='/games/browse'>Find local pickup games here</Link></h1>
+          <h1 className='landing-browseTagline'><Link to='/games/browse'>FIND LOCAL PICKUP GAMES BY SPORT</Link></h1>
           <div className='landing-gameIndex'>
             {games.map(game => <BrowseGamesItem
               key={`game-${game._id}`}
