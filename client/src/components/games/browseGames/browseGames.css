@@ -50,8 +50,19 @@
   margin: 10px;
 }
 
-.browseGameItem-info {
+.browseGameItem-container {
+  display: flex;
   border: 1px solid black;
   margin: 10px;
+  height: 200px;
+}
+
+.browseGameItem-info {
+  border-left: 1px solid black;
+  width: 60%;
   padding: 10px;
+}
+
+.browseGameItem-image {
+  width: 40%;
 }
