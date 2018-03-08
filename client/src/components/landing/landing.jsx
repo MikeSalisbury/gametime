@@ -44,6 +44,7 @@ class Landing extends Component {
           <div className='landing-gameIndex'>
             {games.map(game => <BrowseGamesItem
               key={`game-${game._id}`}
+              gameId={game._id}
               gameImage={game.gameImage}
               title={game.title}
               sport={game.sport}
