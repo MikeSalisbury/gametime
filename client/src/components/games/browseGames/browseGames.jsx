@@ -34,6 +34,8 @@ class BrowseGames extends Component {
           <div className='browseGames-left'>
             <div className='browseGames-map'>Map</div>
             <div className='browseGames-filter'>
+              <button className='filterButton' value='All Sports'
+                onClick={() => this.props.fetchGames()}>All Sports</button>
               <button className='filterButton' value='Basketball'
                  onClick={this.handleSubmit}>Basketball</button>
               <button className='filterButton' value='Football'
