@@ -12,11 +12,16 @@ class ShowGame extends Component {
   }
 
   render() {
-    console.log(this.props.game);
     if (this.props.game) {
-      const { title, sport, numPlayers, skill, location,
-         startDatetime, endDatetime } =
-          this.props.game[this.props.match.params.gameId];
+      let game = this.props.game[this.props.match.params.gameId];
+      const { title, sport, players, numPlayers, skill, location,
+         startDatetime, endDatetime } = game;
+      let gamePlayers = [];
+      for(let i = 0; i < players.length; i++) {
+        gamePlayers.push(players[i].firstName + ' ' + players[i].lastName);
+      }
+      console.log(gamePlayers);
+
       return(
         <div className='showGame-wrapper'>
           <div className='showGame-header'>
@@ -24,7 +29,7 @@ class ShowGame extends Component {
             <div className='showGame-info'>
               <div className='showGame-title'>{title}</div>
               <div className='showGame-sport'>{sport}</div>
-              <div className='showGame-numPlayers'>{numPlayers}</div>
+              <div className='showGame-numPlayers'>{game.players.length}/{numPlayers} players</div>
               <div className='showGame-skill'>{skill}</div>
               <div className='showGame-location'>{location}</div>
               <div className='showGame-startDatetime'>{startDatetime}</div>
@@ -32,7 +37,14 @@ class ShowGame extends Component {
             </div>
           </div>
           <div className='showGame-bottom'>
-            <div className='showGame-players'>List of Player Names</div>
+            <div className='showGame-players'>
+              <h1>Players</h1>
+              <ul>
+                {gamePlayers.map((player, index) =>
+                  <li>{index + 1}. {player}</li>
+                  )}
+              </ul>
+            </div>
             <div className='showGame-chat'>CHAT</div>
             <div className='showGame-locationMap' >MAP</div>
           </div>
