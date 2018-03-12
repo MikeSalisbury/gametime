@@ -7,7 +7,8 @@ players, location, startDatetime, endDatetime}) {
 
     <Link to={`/games/show/${gameId}`}>
       <div className='browseGameItem-container'>
-        <img src={`${gameImage}`} className='browseGameItem-image'/>
+        <img src={`${gameImage}`} className='browseGameItem-image'
+          alt='image of game'/>
         <div className='browseGameItem-info'>
           <h1>{title}</h1>
           <h1>{sport}</h1>
