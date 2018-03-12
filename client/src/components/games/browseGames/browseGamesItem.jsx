@@ -5,7 +5,7 @@ export function BrowseGamesItem({gameId, gameImage, title, sport, skill, numPlay
 players, location, startDatetime, endDatetime}) {
   return(
 
-    <Link to={`/games/show/${gameId}`}>
+    <Link to={`/games/${gameId}`}>
       <div className='browseGameItem-container'>
         <img src={`${gameImage}`} className='browseGameItem-image'
           alt='sport'/>
