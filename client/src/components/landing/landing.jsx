@@ -22,10 +22,9 @@ class Landing extends Component {
   render() {
     if (this.props.games) {
       let games = Object.values(this.props.games);
-      const { fetchFilteredGames } = this.props.fetchFilteredGames;
       return(
         <div className='landing-wrapper'>
-          <img className='landing-heroImage' src='https://jsmultisport.com/wp-content/uploads/2017/07/sports.jpg'/>
+          <img className='landing-heroImage' src='https://jsmultisport.com/wp-content/uploads/2017/07/sports.jpg' alt='multiple sports'/>
           <h1 className='landing-browseTagline'><Link to='/games/browse'>FIND LOCAL PICKUP GAMES BY SPORT</Link></h1>
             <div className='landingGames-filter'>
               <button
