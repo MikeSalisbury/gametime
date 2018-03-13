@@ -16,10 +16,8 @@ class ShowGame extends Component {
       let game = this.props.game[this.props.match.params.gameId];
       const { title, sport, players, numPlayers, skill, location,
          startDatetime, endDatetime } = game;
-      let gamePlayers = [];
-      for(let i = 0; i < players.length; i++) {
-        gamePlayers.push(players[i].firstName + ' ' + players[i].lastName);
-      }
+      let gamePlayers = players.map(player => player.firstName + ' ' + player.lastName);
+
       console.log(gamePlayers);
 
       return(
