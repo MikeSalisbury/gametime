@@ -12,8 +12,8 @@ players, location, startDatetime, endDatetime}) {
         <div className='browseGameItem-info'>
           <h1>{title}</h1>
           <h1>{sport}</h1>
-          <h1>{skill}</h1>
-          <h1>{numPlayers}</h1>
+          <h1>{skill} Level</h1>
+          <h1>{numPlayers} Players</h1>
           <h1>{location}</h1>
           <h1>{startDatetime}</h1>
           <h1>{endDatetime}</h1>
