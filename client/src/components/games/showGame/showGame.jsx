@@ -23,7 +23,7 @@ class ShowGame extends Component {
       return(
         <div className='showGame-wrapper'>
           <div className='showGame-header'>
-            <div className='showGame-heroImage'><img src={`${gameImage}`} alt='game image'></img></div>
+            <div className='showGame-heroImage'><img src={`${gameImage}`} alt='sport'></img></div>
             <div className='showGame-info'>
               <div className='showGame-title'>{title}</div>
               <div className='showGame-sport'>{sport}</div>
