@@ -49,25 +49,43 @@
 }
 
 .showGame-title {
-
+  font-size: 36px;
+  color: #BA55D3;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  text-align: center;
 }
 
 .showGame-sport {
-
+  font-size: 18px;
+  padding: 10px;
 }
 
 .showGame-skill{
+  font-size: 18px;
+  padding: 10px;
 
 }
 
+.showGame-numPlayers {
+  font-size: 18px;
+  padding: 10px;
+}
+
 .showGame-location {
+  font-size: 18px;
+  padding: 10px;
 
 }
 
 .showGame-startDatetime {
+  font-size: 18px;
+  padding: 10px;
 
 }
 
 .showGame-endDatetime {
+  font-size: 18px;
+  padding: 10px;
 
 }
