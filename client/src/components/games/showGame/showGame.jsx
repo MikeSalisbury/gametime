@@ -20,9 +20,9 @@ class ShowGame extends Component {
       startDatetime = new Date(startDatetime).toString();
       endDatetime = new Date(endDatetime).toString();
       let startDate = startDatetime.slice(0, 17);
-      let startTime = startDatetime.slice(17, 25);
+      let startTime = startDatetime.slice(17, 21);
       let endDate = endDatetime.slice(0, 17);
-      let endTime = endDatetime.slice(17, 25);
+      let endTime = endDatetime.slice(17, 21);
 
       return(
         <div className='showGame-wrapper'>
