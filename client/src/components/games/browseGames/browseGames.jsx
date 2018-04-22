@@ -56,6 +56,7 @@ class BrowseGames extends Component {
               title={game.title}
               sport={game.sport}
               skill={game.skill}
+              players={game.players}
               numPlayers={game.numPlayers}
               location={game.location}
               startDatetime={game.startDatetime}

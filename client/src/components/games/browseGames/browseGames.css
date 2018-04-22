@@ -58,13 +58,54 @@
   height: 200px;
 }
 
+.browseGameItem-image {
+  width: 40%;
+}
+
 .browseGameItem-info {
   border-left: 1px solid black;
   width: 60%;
-  padding: 10px;
   background-color: white;
 }
 
-.browseGameItem-image {
-  width: 40%;
+.browseGameItem-title {
+  font-size: 20px;
+  color: #BA55D3;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.browseGameItem-sport {
+  font-size: 16px;
+  padding: 5px 3px;
+}
+
+.browseGameItem-skill {
+  font-size: 16px;
+  padding: 5px 3px;
+
+}
+
+.browseGameItem-numPlayers {
+  font-size: 16px;
+  padding: 5px 3px;
+}
+
+.browseGameItem-location {
+  font-size: 16px;
+  padding: 5px 3px;
+
+}
+
+.browseGameItem-startDatetime {
+  font-size: 16px;
+  padding: 5px 3px;
+
+}
+
+.browseGameItem-endDatetime {
+  font-size: 16px;
+  padding: 5px 3px;
+
 }
