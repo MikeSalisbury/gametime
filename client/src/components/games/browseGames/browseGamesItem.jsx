@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 export function BrowseGamesItem({gameId, gameImage, title, sport, skill, numPlayers,
 players, location, startDatetime, endDatetime}) {
+  let gamePlayers;
+  if(players) {
+    gamePlayers = players.map(player => player.firstName + ' ' + player.lastName);
+  } else {
+    gamePlayers = [];
+  }
 
   startDatetime = new Date(startDatetime).toString();
   endDatetime = new Date(endDatetime).toString();
@@ -20,7 +26,7 @@ players, location, startDatetime, endDatetime}) {
             <h1 className='browseGameItem-title'>{title}</h1>
             <h1 className='browseGameItem-sport'>{sport}</h1>
             <h1 className='browseGameItem-skill'>{skill} Level</h1>
-            <h1 className='browseGameItem-numPlayers'>{players} / {numPlayers} Players</h1>
+            <h1 className='browseGameItem-numPlayers'> {gamePlayers.length} / {numPlayers} Players</h1>
             <h1 className='browseGameItem-location'>{location}</h1>
             <span className='browseGameItem-startDatetime'>Start: {startDate + startTime} PST |</span><span className='browseGameItem-endDatetime'>End: {endDate + endTime} PST</span>
           </div>
