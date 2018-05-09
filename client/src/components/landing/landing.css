@@ -1,7 +1,7 @@
 .landing-heroImage {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  height: 500px;
+  max-height: 500px;
   width: 100%;
 }
 
