@@ -1,6 +1,7 @@
 .gameForm-wrapper {
 display: flex;
 justify-content: center;
+margin-bottom: 60px;
 }
 
 .gameForm-form {
@@ -146,4 +147,13 @@ justify-content: center;
 .gameForm-gameSubmit:hover {
   color: #BA55D3;
   background-color: white;
+}
+
+.gameForm-gameImageUpload {
+  width: 300px;
+  height: 300px;
+  border: 4px dashed gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

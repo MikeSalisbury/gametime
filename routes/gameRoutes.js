@@ -59,10 +59,8 @@ module.exports = app => {
 
     game.save( (err, newGame) => {
       if (err) {
-        console.log(err);
         res.send(400, err.message);
       } else {
-        console.log(newGame);
         res.send(newGame);
       }
     });

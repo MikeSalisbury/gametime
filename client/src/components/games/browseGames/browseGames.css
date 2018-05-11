@@ -68,6 +68,10 @@
   background-color: white;
 }
 
+.browseGameItem-details {
+  width: 100%;
+}
+
 .browseGameItem-title {
   font-size: 20px;
   color: #BA55D3;
@@ -78,34 +82,34 @@
 
 .browseGameItem-sport {
   font-size: 16px;
-  padding: 5px 3px;
+  padding: 0px 5px;
 }
 
 .browseGameItem-skill {
   font-size: 16px;
-  padding: 5px 3px;
+  padding: 0px 5px;
 
 }
 
 .browseGameItem-numPlayers {
   font-size: 16px;
-  padding: 5px 3px;
+  padding: 0px 5px;
 }
 
 .browseGameItem-location {
   font-size: 16px;
-  padding: 5px 3px;
+  padding: 0px 5px;
 
 }
 
 .browseGameItem-startDatetime {
   font-size: 16px;
-  padding: 5px 3px;
+  padding: 0px 5px;
 
 }
 
 .browseGameItem-endDatetime {
   font-size: 16px;
-  padding: 5px 3px;
+  padding: 0px 5px;
 
 }

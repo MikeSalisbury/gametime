@@ -24,11 +24,14 @@ players, location, startDatetime, endDatetime}) {
             alt='sport'/>
           <div className='browseGameItem-info'>
             <h1 className='browseGameItem-title'>{title}</h1>
-            <h1 className='browseGameItem-sport'>{sport}</h1>
-            <h1 className='browseGameItem-skill'>{skill} Level</h1>
-            <h1 className='browseGameItem-numPlayers'> {gamePlayers.length} / {numPlayers} Players</h1>
-            <h1 className='browseGameItem-location'>{location}</h1>
-            <span className='browseGameItem-startDatetime'>Start: {startDate + startTime} PST |</span><span className='browseGameItem-endDatetime'>End: {endDate + endTime} PST</span>
+            <div className='browseGameItem-details'>
+              <h1 className='browseGameItem-sport'>Sport: {sport}</h1>
+              <h1 className='browseGameItem-skill'>{skill} Level</h1>
+              <h1 className='browseGameItem-numPlayers'> {gamePlayers.length} / {numPlayers} Players</h1>
+              <h1 className='browseGameItem-location'>Location: {location}</h1>
+              <h3 className='browseGameItem-startDatetime'>Start: {startDate + startTime} PST</h3>
+              <h3 className='browseGameItem-endDatetime'>End: {endDate + endTime} PST</h3>
+            </div>
           </div>
         </div>
       </Link>

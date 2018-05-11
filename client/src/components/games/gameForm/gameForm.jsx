@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
+import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
+import UploadImage from './uploadImage';
 import './gameForm.css';
+
+// cloudinary.config({
+//   cloud_name: 'sample',
+//   api_key: '874837483274837',
+//   api_secret: 'a676b67565c6767a6767d6767f676fe1'
+// });
 
 class GameForm extends Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {title: "", sport: "", skill: "", players: [], location: "", numPlayers: "", startDatetime: "", endDatetime: "", };
+    this.state = {title: "", sport: "", skill: "", players: [], location: "", numPlayers: "", startDatetime: "", endDatetime: "", image: "https://res.cloudinary.com/dckbujmht/image/upload/c_scale,h_520,w_1200/v1511715474/sports/basketball_game.jpg"};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.uploadImage = this.uploadImage.bind(this);
   }
 
   componentDidMount() {
@@ -16,6 +25,10 @@ class GameForm extends Component {
 
   componentWillReceiveProps(nextProps) {
 
+  }
+
+  uploadImage(upload) {
+    this.setState({image: upload});
   }
 
   handleSubmit(e) {
@@ -60,6 +73,13 @@ class GameForm extends Component {
               <option value='Softball'>Softball</option>
               <option value='Tennis'>Tennis</option>
             </select><br/>
+          </label>
+
+          <label><div className='gameForm-label'>GAME IMAGE</div>
+            <UploadImage
+                postImage={this.uploadImage}
+                imageURL={this.state.image}
+            />
           </label>
 
           <label><div className='gameForm-label'>SKILL LEVEL</div>

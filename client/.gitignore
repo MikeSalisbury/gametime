@@ -8,6 +8,7 @@
 
 # production
 /build
+cloudinary.js
 
 # misc
 .DS_Store
