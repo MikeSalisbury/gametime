@@ -22,7 +22,11 @@ class UploadImage extends React.Component {
       <div>
         <div className='gameForm-gameImageUpload'
           onClick={this.upload}>
-          {this.props.imageURL ? <img style={{width: '100%', height: '100%', objectFit: 'cover'}} alt='sport' src={`${this.props.imageURL}` }/> : 'Drag File or Click'}</div><br/>
+          {this.props.imageURL ?
+            <img style={{width: '100%', height: '100%', objectFit: 'cover'}}
+              alt='sport' src={`${this.props.imageURL}` }/> :
+               'Drag File or Click'}
+        </div><br/>
       </div>
     );
   }

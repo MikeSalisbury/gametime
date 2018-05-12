@@ -12,9 +12,10 @@ class ShowGame extends Component {
   }
 
   render() {
-    if (this.props.game) {
-      let game = this.props.game[this.props.match.params.gameId];
-      const { title, gameImage, sport, players, numPlayers, skill, location} = game;
+    let game = this.props.game;
+    if (game) {
+      game = game[this.props.match.params.gameId];
+      const { title, image, sport, players, numPlayers, skill, location} = game;
       let { startDatetime, endDatetime } = game;
       let gamePlayers = players.map(player => player.firstName + ' ' + player.lastName);
       startDatetime = new Date(startDatetime).toString();
@@ -27,7 +28,7 @@ class ShowGame extends Component {
       return(
         <div className='showGame-wrapper'>
           <div className='showGame-header'>
-            <div className='showGame-heroImage'><img src={`${gameImage}`} alt='sport'></img></div>
+            <img className='showGame-heroImage' src={`${image}`} alt='sport'></img>
             <div className='showGame-info'>
               <div className='showGame-title'>{title}</div>
               <div className='showGame-sport'>Sport: {sport}</div>

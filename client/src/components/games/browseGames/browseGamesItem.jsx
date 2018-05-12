@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function BrowseGamesItem({gameId, gameImage, title, sport, skill, numPlayers,
+export function BrowseGamesItem({gameId, image, title, sport, skill, numPlayers,
 players, location, startDatetime, endDatetime}) {
   let gamePlayers;
   if(players) {
@@ -20,7 +20,7 @@ players, location, startDatetime, endDatetime}) {
 
       <Link to={`/games/${gameId}`}>
         <div className='browseGameItem-container'>
-          <img src={`${gameImage}`} className='browseGameItem-image'
+          <img src={`${image}`} className='browseGameItem-image'
             alt='sport'/>
           <div className='browseGameItem-info'>
             <h1 className='browseGameItem-title'>{title}</h1>

@@ -5,7 +5,6 @@ const { Schema } = mongoose;
 // players: [{ type: Schema.Types.ObjectId, ref: 'User'}] to store OID as reference to users
 const gameSchema = new Schema({
   gameManager: {type: String, required : true},
-  gameImage: {type: String, required : true},
   title: {type: String, required : true},
   sport: {type: String, required : true},
   numPlayers: {type: Number, required : true},
@@ -14,6 +13,7 @@ const gameSchema = new Schema({
   location: {type: String, required : true},
   startDatetime: {type: Date, required : true},
   endDatetime: {type: Date, required : true},
+  image: String,
   lat: String,
   lng: String
 },

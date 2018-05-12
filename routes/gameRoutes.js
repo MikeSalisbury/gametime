@@ -8,26 +8,31 @@ module.exports = app => {
 
   // index page
   app.get('/api/games', (req, res) => {
-    Game.find().then(games => res.send(games));
+    Game.find().then(games => res.status(200).send(games));
   });
 
+  // game filter
   app.post('/api/filteredSport', (req, res) => {
-    console.log(req.body.sport);
     Game.find({sport: req.body.sport})
-    .then(games => res.send(games));
+    .then(games => res.status(200).send(games));
   });
 
   // show page
   app.get('/api/games/:id', (req, res) => {
     Game.findOne( { "_id": ObjectId(req.params.id) } )
-    .then(game => res.send(game));
+    .then(game => res.status(200).send(game));
   });
   // req.body will allow us to manipulate the payload received (via body-parser)
 
   app.post('/api/games', (req, res) => {
+    let image;
+    if(!req.body.image) {
+      image = 'https://jsmultisport.com/wp-content/uploads/2017/07/sports.jpg';
+    } else {
+      image = req.body.image;
+    }
 
     const {
-      gameImage,
       title,
       sport,
       skill,
@@ -42,9 +47,9 @@ module.exports = app => {
 
     players.push(req.user);
 
-    let game = new Game({
+    Game.create({
       "gameManager" : req.user,
-      gameImage,
+      image,
       lat,
       lng,
       title,
@@ -55,13 +60,11 @@ module.exports = app => {
       location,
       startDatetime,
       endDatetime
-    });
-
-    game.save( (err, newGame) => {
+    }, (err, newGame) => {
       if (err) {
-        res.send(400, err.message);
+        res.status(400).send(err.message);
       } else {
-        res.send(newGame);
+        res.status(200).send(newGame);
       }
     });
   });

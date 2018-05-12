@@ -31,6 +31,6 @@ export const fetchGame = (id) => dispatch => (
 export const createGame = (game) => dispatch => (
   axios.post('/api/games', game )
     .then( newGame => {
-      dispatch({ type: RECEIVE_GAME, payload: newGame.data });
+      dispatch({ type: RECEIVE_GAME, payload: newGame.data })
     return newGame.data._id;
   }));
