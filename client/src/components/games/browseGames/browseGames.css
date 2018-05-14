@@ -60,6 +60,7 @@
 
 .browseGameItem-image {
   width: 40%;
+  object-fit: cover;
 }
 
 .browseGameItem-info {

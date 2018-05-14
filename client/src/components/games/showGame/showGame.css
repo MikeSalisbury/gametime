@@ -27,6 +27,7 @@
   border-bottom: 0;
   width: 70%;
   height: 400px;
+  object-fit: cover;
 }
 
 .showGame-players {

@@ -49,6 +49,7 @@ class Landing extends Component {
               sport={game.sport}
               skill={game.skill}
               numPlayers={game.numPlayers}
+              players={game.players}
               location={game.location}
               startDatetime={game.startDatetime}
               endDatetime={game.endDatetime} />
