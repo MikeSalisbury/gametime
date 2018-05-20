@@ -26,6 +26,12 @@
     <script type="text/javascript">
       cloudinary.setCloudName('dckbujmht')
     </script>
+    <script>
+    window.cloudinary_options = {
+          cloud_name: `${process.env.CLOUDINARY_NAME}`,
+          upload_preset: ''
+      }
+    </script>
   </head>
   <body>
     <noscript>

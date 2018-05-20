@@ -20,6 +20,7 @@
   border-right: 1px solid black;
   width: 30%;
   height: 400px;
+  overflow: hidden;
 }
 
 .showGame-heroImage {
