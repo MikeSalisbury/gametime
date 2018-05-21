@@ -11,7 +11,7 @@ class UploadImage extends React.Component {
     window.cloudinary.openUploadWidget(
       {
         cloud_name: `${process.env.REACT_APP_CLOUD_NAME}`,
-        upload_preset: `${process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET}`
+        upload_preset: `${process.env.REACT_APP_UPLOAD_PRESET}`
       },
       (error, images) => {
         if (error === null) {

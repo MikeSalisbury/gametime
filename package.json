@@ -20,9 +20,7 @@
     "passport-facebook": "^2.1.1",
     "passport-google-oauth20": "^1.0.0"
   },
-  "devDependencies": {
-    "react-app-env": "^1.2.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "node ./index.js",
     "server": "nodemon ./index.js",
