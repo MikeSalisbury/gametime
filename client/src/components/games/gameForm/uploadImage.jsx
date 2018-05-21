@@ -1,5 +1,5 @@
 import React from 'react';
-import cloudinaryOptions from './cloudinary';
+// import cloudinaryOptions from './cloudinary';
 
 class UploadImage extends React.Component {
   constructor(props) {
