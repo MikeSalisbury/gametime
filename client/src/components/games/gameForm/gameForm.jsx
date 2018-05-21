@@ -99,6 +99,8 @@ class GameForm extends Component {
           </label>
 
           <label><div className='gameForm-label'>LOCATION</div>
+          <h1>cloud_name: {process.env.REACT_APP_CLOUD_NAME}</h1>
+          <h1>upload_preset: {process.env.REACT_APP_UPLOAD_PRESET}</h1>
             <input
               className='gameForm-gameInput'
               type='text'
