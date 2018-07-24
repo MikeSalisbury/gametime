@@ -6,13 +6,13 @@ class Landing extends React.Component {
     return(
       <div className='landing-container'>
         <section className='top-section'>
-
+          What is gametime?
         </section>
         <section className='mid-section'>
-
+          Create an account!
         </section>
         <section className='bot-section'>
-
+          what users are saying!
         </section>
       </div>
 
