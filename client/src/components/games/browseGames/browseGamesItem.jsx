@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export function BrowseGamesItem({gameId, image, title, sport, skill, numPlayers,
 players, location, startDatetime, endDatetime}) {
-  console.log(players);
+
   let gamePlayers;
   if(players) {
     gamePlayers = players.map(player => player.firstName + ' ' + player.lastName);
   } else {
     gamePlayers = [];
   }
-  console.log(gamePlayers);
+
 
   startDatetime = new Date(startDatetime).toString();
   endDatetime = new Date(endDatetime).toString();
