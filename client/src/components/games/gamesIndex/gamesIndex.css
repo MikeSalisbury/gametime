@@ -1,0 +1,44 @@
+.gamesIndex-heroImage {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  max-height: 500px;
+  width: 100%;
+}
+
+.gamesIndex-browseTagline {
+  margin: 20px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #BA55D3;
+}
+
+.gamesIndexGames-filter {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+}
+
+.filterButton {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  color: #BA55D3;
+  background-color: white;
+}
+
+.filterButton:hover {
+  color: white;
+  background-color: #BA55D3;
+}
+
+.gamesIndex-gameIndex {
+  margin-bottom: 80px;
+}

@@ -7,6 +7,7 @@ import Landing from './landing/landingContainer';
 import BrowseGames from './games/browseGames/browseGamesContainer';
 import GameForm from './games/gameForm/gameFormContainer';
 import ShowGame from './games/showGame/showGameContainer';
+import GameIndex from './games/gamesIndex/gamesIndexContainer';
 
 import * as actions from '../actions/actions';
 
@@ -28,6 +29,7 @@ class App extends Component {
             <Footer />
             <Switch>
             <Route exact path='/' component={Landing} />
+            <Route exact path='/games' component={GameIndex} />
             <Route exact path ='/games/new' component={GameForm} />
             <Route exact path ='/games/browse' component={BrowseGames} />
             <Route exact path ='/games/browse/:sport' component={BrowseGames} />
