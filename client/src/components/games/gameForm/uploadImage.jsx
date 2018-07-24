@@ -7,7 +7,7 @@ class UploadImage extends React.Component {
   }
 
   upload(e) {
-
+    console.log(process.env);
     window.cloudinary.openUploadWidget(
       {
         cloud_name: `${process.env.REACT_APP_CLOUD_NAME}`,

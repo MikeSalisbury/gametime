@@ -7,8 +7,15 @@ import App from './components/App';
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  let store = configureStore();
-
+  // let preconfiguredStore;
+  let store;
+  // if (window.cloudinary_options) {
+  //   preconfiguredStore = { cloudinary: window.cloudinary_options };
+  //   store = configureStore(preconfiguredStore);
+  //   delete window.cloudinary_options;
+  // } else {
+    store = configureStore();
+  // }
 
   const root = document.getElementById('root');
   ReactDOM.render(<Provider store={store}><App /></Provider>, root);
