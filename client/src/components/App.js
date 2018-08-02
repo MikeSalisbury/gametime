@@ -12,7 +12,7 @@ import GameIndex from './games/gamesIndex/gamesIndexContainer';
 import * as actions from '../actions/actions';
 
 
-const UserProfile = () => <h2>Users Profile </h2>;
+const UserProfile = () => <h2 style={{paddingTop: "54px"}}>Users Profile </h2>;
 
 class App extends Component {
 

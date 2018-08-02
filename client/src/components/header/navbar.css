@@ -3,6 +3,8 @@
   /*width: 100%;*/
   background-color: white;
   justify-content: space-between;
+  position: fixed;
+  width: 100vw;
 }
 
 .nav-logo {

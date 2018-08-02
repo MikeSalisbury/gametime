@@ -2,6 +2,7 @@
 display: flex;
 justify-content: center;
 margin-bottom: 60px;
+padding-top: 54px;
 }
 
 .gameForm-form {
@@ -156,5 +157,5 @@ margin-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
